@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1300" viewBox="0 0 1200 1300" role="img" aria-labelledby="flowTitle flowDesc">
+  <title id="flowTitle">Expense tracker program flow</title>
+  <desc id="flowDesc">Flow chart showing startup loading, the menu loop, expense input validation, CSV saving, category totals, and exit.</desc>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#334155"/>
+    </marker>
+    <marker id="arrowRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#dc2626"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="1300" fill="#ffffff"/>
+  <text x="40" y="34" fill="#0f172a" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="24" font-weight="700">Expense Tracker — Program Flow</text>
+  <text x="40" y="56" fill="#64748b" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="13">Startup loading, menu loop, input validation, CSV persistence, and exit</text>
+
+  <!-- Start -->
+  <rect x="160" y="80" width="240" height="50" rx="25" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="280" y="111" text-anchor="middle" fill="#166534" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="14" font-weight="700">Start</text>
+  <path d="M 280 130 L 280 160" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow)"/>
+
+  <!-- Load -->
+  <rect x="120" y="160" width="320" height="60" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="280" y="185" text-anchor="middle" fill="#1e3a8a" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="13.5" font-weight="600">Load expenses.csv</text>
+  <text x="280" y="205" text-anchor="middle" fill="#1e3a8a" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="12">catch FileNotFoundError</text>
+  <path d="M 280 220 L 280 250" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow)"/>
+
+  <!-- File exists decision -->
+  <path d="M 280 250 L 430 305 L 280 360 L 130 305 Z" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="280" y="300" text-anchor="middle" fill="#4c1d95" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="13" font-weight="600">expenses.csv</text>
+  <text x="280" y="320" text-anchor="middle" fill="#4c1d95" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="13" font-weight="600">found?</text>
+
+  <!-- Yes path -->
+  <path d="M 280 360 L 280 390" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow)"/>
+  <text x="292" y="380" fill="#166534" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="11.5" font-weight="700">Yes</text>
+
+  <!-- No path -->
+  <path d="M 430 305 L 700 305" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow)"/>
+  <text x="450" y="296" fill="#b45309" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="11.5" font-weight="700">No</text>
+  <rect x="700" y="275" width="280" height="60" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+  <text x="840" y="300" text-anchor="middle" fill="#92400e" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="13" font-weight="600">Start with an empty</text>
+  <text x="840" y="320" text-anchor="middle" fill="#92400e" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="13" font-weight="600">expense list</text>
+  <path d="M 840 335 L 840 370 L 280 370 L 280 390" stroke="#334155" stroke-width="1.8" fill="none"/>
+  <circle cx="280" cy="370" r="3.5" fill="#334155"/>
+
+  <!-- Menu -->
+  <rect x="120" y="390" width="320" height="70" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="280" y="418" text-anchor="middle" fill="#1e3a8a" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="13.5" font-weight="600">Display menu</text>
+  <text x="280" y="440" text-anchor="middle" fill="#1e3a8a" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="12">read choice (1–4)</text>
+  <path d="M 280 460 L 280 490" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow)"/>
+
+  <!-- Choice decision -->
+  <path d="M 280 490 L 430 550 L 280 610 L 130 550 Z" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="280" y="545" text-anchor="middle" fill="#4c1d95" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="13" font-weight="600">choice 1, 2,</text>
+  <text x="280" y="565" text-anchor="middle" fill="#4c1d95" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="13" font-weight="600">3, or 4?</text>
+
+  <!-- Branch bus -->
+  <path d="M 430 550 L 560 550" stroke="#334155" stroke-width="1.8"/>
+  <path d="M 560 405 L 560 1070" stroke="#334155" stroke-width="1.8"/>
+  <circle cx="560" cy="550" r="3.5" fill="#334155"/>
+
+  <!-- Branch 1: add -->
+  <path d="M 560 405 L 620 405" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow)"/>
+  <text x="584" y="396" text-anchor="middle" fill="#1d4ed8" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="11" font-weight="700">1</text>
+  <rect x="620" y="370" width="300" height="70" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="770" y="397" text-anchor="middle" fill="#1e3a8a" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="13" font-weight="600">Enter date, item,</text>
+  <text x="770" y="419" text-anchor="middle" fill="#1e3a8a" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="13" font-weight="600">category, and amount</text>
+  <path d="M 770 440 L 770 470" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow)"/>
+
+  <path d="M 770 470 L 900 520 L 770 570 L 640 520 Z" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="770" y="515" text-anchor="middle" fill="#4c1d95" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="12.5" font-weight="600">Amount valid?</text>
+  <text x="770" y="535" text-anchor="middle" fill="#4c1d95" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="11.5">numeric and positive</text>
+
+  <!-- No -> error -->
+  <path d="M 770 570 L 770 600" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow)"/>
+  <text x="782" y="590" fill="#b91c1c" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="11.5" font-weight="700">No</text>
+  <rect x="620" y="600" width="300" height="60" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="770" y="625" text-anchor="middle" fill="#991b1b" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="12.5" font-weight="600">Print ValueError message</text>
+  <text x="770" y="645" text-anchor="middle" fill="#991b1b" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="12">and ask for the amount again</text>
+
+  <!-- Retry curve -->
+  <path d="M 920 630 C 990 630, 990 405, 920 405" stroke="#dc2626" stroke-width="1.6" stroke-dasharray="6 4" fill="none" marker-end="url(#arrowRed)"/>
+  <text x="1000" y="520" fill="#b91c1c" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="10.5" font-weight="600" transform="rotate(90 1000 520)">retry</text>
+
+  <!-- Yes -> success -->
+  <path d="M 640 520 L 600 520 L 600 700 L 620 700" stroke="#334155" stroke-width="1.8" fill="none" marker-end="url(#arrow)"/>
+  <text x="608" y="510" fill="#166534" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="11.5" font-weight="700">Yes</text>
+  <rect x="620" y="670" width="300" height="60" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="770" y="695" text-anchor="middle" fill="#166534" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="12.5" font-weight="600">Append expense and</text>
+  <text x="770" y="715" text-anchor="middle" fill="#166534" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="12.5" font-weight="600">save to expenses.csv</text>
+  <path d="M 920 700 L 1160 700 L 1160 1220" stroke="#334155" stroke-width="1.8" fill="none"/>
+
+  <!-- Branch 2: show -->
+  <path d="M 560 855 L 620 855" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow)"/>
+  <text x="584" y="846" text-anchor="middle" fill="#1d4ed8" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="11" font-weight="700">2</text>
+  <rect x="620" y="820" width="300" height="70" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="770" y="847" text-anchor="middle" fill="#1e3a8a" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="13" font-weight="600">Show all expenses and</text>
+  <text x="770" y="869" text-anchor="middle" fill="#1e3a8a" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="13" font-weight="600">unique categories (set)</text>
+  <path d="M 920 855 L 1160 855" stroke="#334155" stroke-width="1.8"/>
+
+  <!-- Branch 3: totals -->
+  <path d="M 560 965 L 620 965" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow)"/>
+  <text x="584" y="956" text-anchor="middle" fill="#1d4ed8" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="11" font-weight="700">3</text>
+  <rect x="620" y="930" width="300" height="70" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="770" y="957" text-anchor="middle" fill="#166534" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="13" font-weight="600">Total expenses by</text>
+  <text x="770" y="979" text-anchor="middle" fill="#166534" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="13" font-weight="600">category</text>
+  <path d="M 920 965 L 1160 965" stroke="#334155" stroke-width="1.8"/>
+
+  <!-- Branch 4: exit -->
+  <path d="M 560 1070 L 620 1070" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow)"/>
+  <text x="584" y="1061" text-anchor="middle" fill="#1d4ed8" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="11" font-weight="700">4</text>
+  <rect x="620" y="1040" width="300" height="60" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="770" y="1077" text-anchor="middle" fill="#166534" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="13" font-weight="600">Exit program</text>
+  <path d="M 770 1100 L 770 1140" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow)"/>
+
+  <!-- End -->
+  <rect x="650" y="1140" width="240" height="50" rx="25" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="770" y="1171" text-anchor="middle" fill="#166534" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="14" font-weight="700">End</text>
+
+  <!-- Loop back to menu -->
+  <path d="M 1160 1220 L 100 1220 L 100 425 L 120 425" stroke="#334155" stroke-width="1.8" fill="none" marker-end="url(#arrow)"/>
+  <text x="500" y="1211" text-anchor="middle" fill="#475569" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="11" font-weight="600">repeat the menu until the user chooses 4</text>
+
+  <!-- Legend -->
+  <g font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="10.5" fill="#475569">
+    <rect x="40" y="1252" width="14" height="14" rx="3" fill="#dbeafe" stroke="#2563eb"/>
+    <text x="60" y="1263">input / process</text>
+    <rect x="165" y="1252" width="14" height="14" rx="3" fill="#ede9fe" stroke="#7c3aed"/>
+    <text x="185" y="1263">decision</text>
+    <rect x="270" y="1252" width="14" height="14" rx="3" fill="#dcfce7" stroke="#16a34a"/>
+    <text x="290" y="1263">success / output</text>
+    <rect x="405" y="1252" width="14" height="14" rx="3" fill="#fee2e2" stroke="#dc2626"/>
+    <text x="425" y="1263">error / retry</text>
+    <rect x="520" y="1252" width="14" height="14" rx="3" fill="#fef3c7" stroke="#d97706"/>
+    <text x="540" y="1263">warning / handled missing file</text>
+  </g>
+</svg>

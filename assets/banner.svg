@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="260" viewBox="0 0 1000 260" role="img" aria-labelledby="bannerTitle bannerDesc">
+  <title id="bannerTitle">Python Files and Errors Assessment</title>
+  <desc id="bannerDesc">Project banner for an expense tracker and attendance cleaner built with Python file handling, exception handling, sets, and list comprehensions.</desc>
+
+  <defs>
+    <linearGradient id="bannerGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="55%" stop-color="#1e3a8a"/>
+      <stop offset="100%" stop-color="#4c1d95"/>
+    </linearGradient>
+    <linearGradient id="codeGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0b1220"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1000" height="260" fill="url(#bannerGradient)"/>
+  <circle cx="930" cy="20" r="130" fill="#ffffff" opacity="0.04"/>
+  <circle cx="70" cy="250" r="110" fill="#ffffff" opacity="0.03"/>
+
+  <text x="48" y="38" fill="#93c5fd" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="12" font-weight="700" letter-spacing="2.2">PYTHON · FILE HANDLING · EXCEPTIONS</text>
+
+  <text x="48" y="92" fill="#ffffff" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="34" font-weight="700">Python Files &amp; Errors Assessment</text>
+  <text x="48" y="124" fill="#dbeafe" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="15.5">Expense tracking and attendance cleaning with file handling,</text>
+  <text x="48" y="146" fill="#dbeafe" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="15.5">exception handling, sets, and comprehensions.</text>
+
+  <g font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="12" font-weight="600" text-anchor="middle">
+    <rect x="48" y="172" width="105" height="28" rx="14" fill="#ffffff" fill-opacity="0.12" stroke="#93c5fd" stroke-opacity="0.75"/>
+    <text x="100.5" y="190.5" fill="#eff6ff">File Handling</text>
+
+    <rect x="163" y="172" width="90" height="28" rx="14" fill="#ffffff" fill-opacity="0.12" stroke="#93c5fd" stroke-opacity="0.75"/>
+    <text x="208" y="190.5" fill="#eff6ff">Exceptions</text>
+
+    <rect x="263" y="172" width="55" height="28" rx="14" fill="#ffffff" fill-opacity="0.12" stroke="#93c5fd" stroke-opacity="0.75"/>
+    <text x="290.5" y="190.5" fill="#eff6ff">Sets</text>
+
+    <rect x="328" y="172" width="155" height="28" rx="14" fill="#ffffff" fill-opacity="0.12" stroke="#93c5fd" stroke-opacity="0.75"/>
+    <text x="405.5" y="190.5" fill="#eff6ff">List Comprehensions</text>
+
+    <rect x="493" y="172" width="50" height="28" rx="14" fill="#ffffff" fill-opacity="0.12" stroke="#93c5fd" stroke-opacity="0.75"/>
+    <text x="518" y="190.5" fill="#eff6ff">CSV</text>
+  </g>
+
+  <text x="48" y="228" fill="#bfdbfe" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="12">Two Python programs · CSV persistence · Clean, deduplicated records</text>
+
+  <g>
+    <rect x="650" y="40" width="310" height="180" rx="12" fill="url(#codeGradient)" stroke="#334155" stroke-width="1.5"/>
+    <path d="M 650 70 L 960 70" stroke="#334155" stroke-width="1"/>
+    <circle cx="668" cy="55" r="4" fill="#f87171"/>
+    <circle cx="682" cy="55" r="4" fill="#fbbf24"/>
+    <circle cx="696" cy="55" r="4" fill="#34d399"/>
+    <text x="930" y="59" text-anchor="end" fill="#94a3b8" font-family="Consolas, Courier New, monospace" font-size="10">expense_tracker.py</text>
+
+    <g font-family="Consolas, Courier New, monospace" font-size="10.5">
+      <text x="668" y="91" fill="#c084fc">def</text>
+      <text x="692" y="91" fill="#60a5fa">load_expenses</text>
+      <text x="772" y="91" fill="#cbd5e1">():</text>
+
+      <text x="680" y="108" fill="#c084fc">try</text>
+      <text x="704" y="108" fill="#cbd5e1">:</text>
+
+      <text x="680" y="125" fill="#c084fc">with</text>
+      <text x="708" y="125" fill="#cbd5e1">open(</text>
+      <text x="744" y="125" fill="#86efac">"expenses.csv"</text>
+      <text x="830" y="125" fill="#cbd5e1">) as f:</text>
+
+      <text x="692" y="142" fill="#cbd5e1">rows = list(</text>
+      <text x="764" y="142" fill="#f0abfc">csv.DictReader</text>
+      <text x="852" y="142" fill="#cbd5e1">(f))</text>
+
+      <text x="680" y="159" fill="#c084fc">except</text>
+      <text x="716" y="159" fill="#fbbf24">FileNotFoundError</text>
+      <text x="818" y="159" fill="#cbd5e1">:</text>
+
+      <text x="692" y="176" fill="#c084fc">return</text>
+      <text x="728" y="176" fill="#cbd5e1">[]</text>
+    </g>
+  </g>
+</svg>
