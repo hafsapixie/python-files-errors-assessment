@@ -15,42 +15,6 @@ Both programs demonstrate file handling, exception handling, sets, and list comp
   <figcaption>Project Overview</figcaption>
 </figure>
 
-### Folder Structure
-```
-python-files-errors-assessment/
-├── expense_tracker.py
-├── attendance_cleaner.py
-├── attendance.txt
-├── assets/
-│   ├── banner.svg
-│   ├── overview.svg
-│   ├── expense_tracker_flow.svg
-│   ├── attendance_cleaner_flow.svg
-│   └── uml_diagram.svg
-├── README.md
-└── assessment_runs/
-    ├── rendered/
-    │   ├── attendance_cleaner_flow.png
-    │   ├── banner.png
-    │   ├── expense_tracker_flow.png
-    │   ├── overview.png
-    │   └── uml_diagram.png
-    ├── run_assessment.py
-    ├── results/
-    │   ├── expense_persist.txt
-    │   ├── expense_invalid.txt
-    │   ├── expense_empty_fields.txt
-    │   ├── expense_empty_state.txt
-    │   ├── expense_multi.txt
-    │   ├── attendance_normal.txt
-    │   ├── attendance_missing.txt
-    │   ├── attendance_empty.txt
-    │   └── attendance_clean_input.txt
-    ├── pty_simple.py
-    ├── check_svg_layout.py
-    └── render_svgs.py
-```
-
 ---
 
 ## Task 1: Institute Expense Tracker (`expense_tracker.py`)
