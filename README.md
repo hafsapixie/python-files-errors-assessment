@@ -1,6 +1,6 @@
 # Python Files & Errors Assessment
 
-<p align="center"><img src="assets/banner.png" alt="banner" width="100%"></p>
+<p align="center"><img src="assets/banner.svg" alt="banner" width="100%"></p>
 
 ## Project Overview
 
@@ -11,7 +11,7 @@ This repository contains two Python programs for a training institute:
 Both programs demonstrate file handling, exception handling, sets, and list comprehensions.
 
 <figure style="text-align: center;">
-  <img src="assets/overview.png" alt="Project Overview">
+  <img src="assets/overview.svg" alt="Project Overview">
   <figcaption>Project Overview</figcaption>
 </figure>
 
@@ -66,7 +66,7 @@ A command-line application that manages expense records in a CSV file. It allows
 
 ### Program Flow
 <figure style="text-align: center;">
-  <img src="assets/expense_tracker_flow.png" alt="Expense tracker program flow">
+  <img src="assets/expense_tracker_flow.svg" alt="Expense tracker program flow">
   <figcaption>Expense tracker program flow</figcaption>
 </figure>
 
@@ -120,7 +120,7 @@ A program that reads attendance records from a text file, cleans them by removin
 
 ### Program Flow
 <figure style="text-align: center;">
-  <img src="assets/attendance_cleaner_flow.png" alt="Attendance cleaner program flow">
+  <img src="assets/attendance_cleaner_flow.svg" alt="Attendance cleaner program flow">
   <figcaption>Attendance cleaner program flow</figcaption>
 </figure>
 
@@ -157,7 +157,7 @@ A program that reads attendance records from a text file, cleans them by removin
 This project uses a **module diagram** showing the relationships between files, constants, functions, and calls.
 
 <figure style="text-align: center;">
-  <img src="assets/uml_diagram.png" alt="UML Module Diagram">
+  <img src="assets/uml_diagram.svg" alt="UML Module Diagram">
   <figcaption>UML Module Diagram - Procedural Project</figcaption>
 </figure>
 
@@ -280,21 +280,21 @@ Saved cleaned list to attendance_clean.csv.
 ## Test Cases
 
 ### Expense Tracker Test Cases
-| # | Scenario | Input | Expected Output |
+| # | Scenario | Input | Expected Result |
 |---|----------|-------|----------------|
 | 1 | First run, add expense | 2026-11-15, Printer paper, Stationery, 45.50 | Saved expense, can be loaded next run |
 | 2 | Invalid amount | abc | "Invalid amount. Enter a number, for example 25.50." |
 | 3 | Empty field | (blank) | "This field cannot be empty. Please try again." |
 | 4 | Empty state | No choice | "No expenses have been recorded yet." |
-| 5 | Multiple categories | Add expenses across categories | Displays all categories and correct totals |
+| 5 | Multiple categories | Add expenses across different categories | Displays all categories and correct totals |
 
 ### Attendance Cleaner Test Cases
 | # | Scenario | Input | Expected Result |
 |---|----------|-------|----------------|
-| 1 | Normal file | attendance.txt with mixed case | 8 original, 5 unique, sorted list |
+| 1 | Normal file | attendance.txt with mixed case | 8 original records, 5 unique, sorted list |
 | 2 | Missing file | No attendance.txt | Shows file not found error |
 | 3 | Empty file | Empty attendance.txt | Shows no records found |
-| 4 | Clean input | Clean attendance.txt | 3 original, 3 unique students |
+| 4 | Clean input | Clean attendance.txt | 3 original records, 3 unique students |
 
 ---
 
@@ -302,9 +302,3 @@ Saved cleaned list to attendance_clean.csv.
 
 **Hafsa Naseer**  
 GitHub: [hafsapixie](https://github.com/hafsapixie)
-
-Assumptions made:
-1. The repository name follows the assignment brief exactly.
-2. The author name and GitHub username are as provided in the brief.
-3. The SVG files were generated using Chrome and are included in the repository.
-4. The rendered PNGs are stored in a separate `assessment_runs/rendered/` folder as required by the workflow.
